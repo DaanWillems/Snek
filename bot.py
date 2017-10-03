@@ -11,10 +11,10 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-@bot.command()
-async def woop():
+@bot.command(pass_context=True)
+async def woop(ctx):
     """Woop woop"""
-    await bot.say("Woop we have a bot now!")
+    await bot.say(ctx.message.author.display_name+ " is excited!")
 
 
 bot.run('MzY0MzczODExODA3OTExOTQ2.DLPUqg.tWvujqihsOdUGUsr_owzvo7Rhuo')
