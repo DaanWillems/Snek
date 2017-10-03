@@ -17,6 +17,11 @@ async def woop(ctx):
     """Woop woop"""
     await bot.say(ctx.message.author.display_name+ " is excited!")
 
+@bot.command()
+async def woopwoop():
+    """CALLING THE COPS!!!"""
+    await bot.say("That's the sound of the police!")
+
 @bot.command(pass_context=True)
 async def kill(ctx):
     """Make the bot commit suicide"""
