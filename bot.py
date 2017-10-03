@@ -39,4 +39,4 @@ async def repeat():
     await bot.say("!repeat")
 
 
-bot.run('MzY0MzczODExODA3OTExOTQ2.DLPUqg.tWvujqihsOdUGUsr_owzvo7Rhuo')
+bot.run('MzY0Nzg4NjQwNzE2NTU0MjQw.DLU3aA.JxU5cqP_m2wHp4t-lqddKF2FXCA')
