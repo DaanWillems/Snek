@@ -1,4 +1,5 @@
 import discord
+import time
 from discord.ext import commands
 
 description = '''Mainframe'''
@@ -15,6 +16,12 @@ async def on_ready():
 async def woop(ctx):
     """Woop woop"""
     await bot.say(ctx.message.author.display_name+ " is excited!")
+
+@bot.command()
+async def repeat():
+    """Woop woop"""
+    time.sleep(2)
+    await bot.say("!repeat")
 
 
 bot.run('MzY0MzczODExODA3OTExOTQ2.DLPUqg.tWvujqihsOdUGUsr_owzvo7Rhuo')
