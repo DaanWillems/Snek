@@ -38,5 +38,10 @@ async def repeat():
     time.sleep(2)
     await bot.say("!repeat")
 
+@bot.command()
+async def suicide():
+    """Give up on life"""
+    await bot.say("Do a flip!")
+
 
 bot.run('MzY0Nzg4NjQwNzE2NTU0MjQw.DLU3aA.JxU5cqP_m2wHp4t-lqddKF2FXCA')
