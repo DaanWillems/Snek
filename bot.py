@@ -1,9 +1,12 @@
 import discord
 import time
+import random
 from discord.ext import commands
 
 description = '''Mainframe'''
 bot = commands.Bot(command_prefix='!', description=description)
+
+responses = ["hiss", "i bite you", "i am darkness", "heck off", "am scary cober", "i do a flat"]
 
 @bot.event
 async def on_ready():
@@ -42,6 +45,15 @@ async def repeat():
 async def suicide():
     """Give up on life"""
     await bot.say("Do a flip!")
+
+@bot.command()
+async def hiss():
+    """Talk to snek!"""
+    await bot.say(random.choice(responses))
+
+
+
+
 
 
 bot.run('MzY0Nzg4NjQwNzE2NTU0MjQw.DLU3aA.JxU5cqP_m2wHp4t-lqddKF2FXCA')
