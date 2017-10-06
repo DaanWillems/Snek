@@ -6,7 +6,7 @@ from discord.ext import commands
 description = '''Mainframe'''
 bot = commands.Bot(command_prefix='!', description=description)
 
-responses = ["hiss", "i bite you", "i am darkness", "heck off", "am scary cober", "i do a flat"]
+responses = ["hiss", "i bite you", "i am darkness", "heck off", "am scary cober", "i do a flat", "ill do you a chomp", "this snoot will NOT boop", "i am nice snek", "SNEK", "STAHP", "doing a shed"]
 
 @bot.event
 async def on_ready():
