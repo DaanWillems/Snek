@@ -6,6 +6,7 @@ import (
 	"net"
 	"net/textproto"
 	"os"
+	"strconv"
 )
 
 const (
@@ -14,7 +15,15 @@ const (
 	CONN_TYPE = "tcp"
 )
 
+type Server struct {
+	PlayerAmount int
+}
+
+var server Server
+
 func startServer() {
+	server := Server{}
+	server.PlayerAmount = 0
 	// Listen for incoming connections.
 	l, err := net.Listen(CONN_TYPE, CONN_HOST+":"+CONN_PORT)
 	if err != nil {
@@ -45,6 +54,8 @@ func readFromConn(conn net.Conn) {
 	for {
 		line, err := tp.ReadLine()
 		fmt.Println(line)
+		server.PlayerAmount, _ = strconv.Atoi(line)
+
 		if err != nil {
 			fmt.Println("Closing connection")
 			return

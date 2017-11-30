@@ -1,4 +1,4 @@
-package bot
+package main
 
 import (
 	"fmt"
@@ -10,6 +10,10 @@ import (
 )
 
 var session *discordgo.Session
+
+const (
+	botId = "364788640716554240"
+)
 
 func StartBot() {
 	loadCommands()
@@ -43,6 +47,14 @@ func StartBot() {
 // This function will be called (due to AddHandler above) every time a new
 // message is created on any channel that the autenticated bot has access to.
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
+
+	if m.Author.ID == botId {
+		return
+	}
+
+	if m.Content[0] != '!' {
+		return
+	}
 
 	//Send the command to the evaluator
 	r := evaluateCommand(s, m)
