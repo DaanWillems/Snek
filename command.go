@@ -10,6 +10,7 @@ func loadCommands() {
 	commandMap = map[string]func(s *discordgo.Session, m *discordgo.MessageCreate, args []string) string{
 		"!status": statusCommand,
 		"!id":     getIdCommand,
+		"!task":   tasksCommand,
 		"!help":   statusCommand,
 	}
 }
